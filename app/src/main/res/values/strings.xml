@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Simple Navigation with Button</string>
+    <string name="second_fragment">Second Fragment Hello</string>
+    <string name="home_fragment">Home Fragment Hello</string>
+    <string name="to_second">To Second</string>
+    <string name="to_third">To Third</string>
+    <string name="to_home">To Home</string>
+    <string name="third_fragment">Third Fragment Hello</string>
+</resources>
