@@ -17,9 +17,6 @@
         <action
             android:id="@+id/action_homeFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_infoFragment"
-            app:destination="@id/infoFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -48,6 +45,12 @@
         <action
             android:id="@+id/action_thirdFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+        <argument
+            android:name="AnyNumber"
+            app:argType="integer" />
+        <argument
+            android:name="From"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"

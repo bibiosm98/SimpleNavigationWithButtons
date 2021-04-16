@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
 //        }
 
         binding.toThirdButton.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToThirdFragment())
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToThirdFragment(100, "Home Fragment"))
         }
 
         setHasOptionsMenu(true)
@@ -43,7 +43,7 @@ class HomeFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.info_fragment, menu)
+        inflater.inflate(R.menu.home_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

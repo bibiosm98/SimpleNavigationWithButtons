@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -29,6 +30,12 @@ class ThirdFragment : Fragment() {
         binding.toSecondButton.setOnClickListener {
             findNavController().navigate(ThirdFragmentDirections.actionThirdFragmentToSecondFragment())
         }
+
+        val args = ThirdFragmentArgs.fromBundle(requireArguments())
+        Toast.makeText(context, "From: ${args.From}: ${args.AnyNumber}", Toast.LENGTH_LONG).show()
+//        val args = arguments?.let { ThirdFragmentArgs.fromBundle(it) }
+//        if (args != null) { Toast.makeText(context, args.From + ": " + args.AnyNumber, Toast.LENGTH_SHORT).show() }
+
 
         return binding.root
     }

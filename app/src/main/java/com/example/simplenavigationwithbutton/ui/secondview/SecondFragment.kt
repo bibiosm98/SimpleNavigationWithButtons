@@ -29,7 +29,7 @@ class SecondFragment : Fragment() {
         }
 
         binding.toThirdButton.setOnClickListener {
-            findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToThirdFragment())
+            findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToThirdFragment(50, "Second Fragment"))
         }
 
         return binding.root
