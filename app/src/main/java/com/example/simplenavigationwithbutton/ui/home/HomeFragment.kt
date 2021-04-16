@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.simplenavigationwithbutton.R
 import com.example.simplenavigationwithbutton.databinding.HomeFragmentBinding
@@ -24,9 +25,12 @@ class HomeFragment : Fragment() {
 
         val binding: HomeFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.home_fragment, container, false)
 
-        binding.toSecondButton.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSecondFragment())
-        }
+        binding.toSecondButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_secondFragment)
+        )
+//        binding.toSecondButton.setOnClickListener {
+//            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSecondFragment())
+//        }
 
         binding.toThirdButton.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToThirdFragment())
